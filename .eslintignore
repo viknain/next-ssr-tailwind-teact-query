@@ -1,0 +1,14 @@
+# don't ever lint node_modules
+node_modules
+# don't lint build output (make sure it's set to your correct build folder name)
+dist
+# don't lint nyc coverage output
+coverage
+home.ts
+customer.ts
+index.tsx
+index.ts
+scaner\index.tsx
+accordion-card\index.tsx
+pages\reusable-bottle\index.tsx
+scanner-comp.js

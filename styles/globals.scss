@@ -1,0 +1,38 @@
+// @tailwind base;
+// @tailwind components;
+// @tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: #f4fafb;
+  font-family: var(--font-family2);
+  -webkit-tap-highlight-color: transparent;
+}
+.layout {
+  margin: 0 auto;
+  padding-bottom: 4.6667rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+@import './fonts.scss';
+@import './themes/theme.scss';
+@import './globalUtilities.scss';
+
+
+
+
+
+.main-container{
+  padding: 0 20px;
+}

@@ -1,0 +1,71 @@
+{
+  "name": "revo-web-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "prepare": "husky install && husky add .husky/pre-commit 'yarn lint-staged'",
+    "lint": "tsc --noEmit && eslint '**/*.{js,jsx,ts,tsx}' --fix  --no-error-on-unmatched-pattern --ignore-pattern node_modules/"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}, **/*.{js,jsx,ts,tsx}": [
+      "yarn lint"
+    ],
+    "**/*.{js,jsx,ts,tsx}": [
+      "yarn lint"
+    ],
+    "**/components/**/**/*.{js,ts,jsx,tsx}": [
+      "yarn lint"
+    ],
+    "**/components/**/**/**/*.{js,ts,jsx,tsx}": [
+      "yarn lint"
+    ]
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.6.1",
+    "@types/react-query": "^1.2.9",
+    "@types/redux-logger": "^3.0.9",
+    "axios": "^0.21.4",
+    "babel-eslint": "^10.1.0",
+    "caniuse-lite": "^1.0.30001267",
+    "next": "v9.x.x",
+    "next-i18next": "^8.9.0",
+    "react": "^17.0.2",
+    "react-dom": "17.0.2",
+    "react-query": "^3.27.0",
+    "react-redux": "^7.2.5",
+    "redux-logger": "^3.0.6",
+    "redux-persist": "^6.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@types/node": "^16.7.10",
+    "@types/react": "^17.0.19",
+    "@types/react-dom": "^17.0.9",
+    "@types/react-otp-input": "^2.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.30.0",
+    "@typescript-eslint/parser": "^4.30.0",
+    "autoprefixer": "^9",
+    "babel-loader": "^8.2.2",
+    "css-loader": "5.2.7",
+    "eslint": "^7.32.0",
+    "eslint-config-next": "11.1.2",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.25.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.1.2",
+    "postcss": "^7",
+    "postcss-loader": "^4.2.0",
+    "prettier": "^2.3.2",
+    "sass": "^1.39.0",
+    "sass-loader": "10.1.1",
+    "style-loader": "2.0.0",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "typescript": "^4.4.2"
+  }
+}

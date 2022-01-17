@@ -1,0 +1,51 @@
+.errormodal{
+.modal {
+  @apply my-0 mx-auto relative;
+  max-width: 360px;
+  z-index: 99;
+  transition:2s;
+ 
+  .modalbody {
+    @apply bg-white p-2;
+    border-radius: 10px;  
+    span{
+      @apply underline cursor-pointer;
+      color: var(--text-dark)
+    } 
+    h2 {
+      @apply font-normal text-base leading-6 text-left p-2;
+      color: var(--text-color);
+      font-family: var(--font-family3);
+    }
+    p {
+      @apply font-medium text-sm leading-5 text-left p-2;
+      color: var(--text-color);
+      font-family: var(--font-family3);
+      &:nth-child(4) {
+        border-bottom: none;
+      }
+    }
+    .ctaBtn{
+      @apply font-medium text-sm leading-5 text-center cursor-pointer mb-0;
+      border-top: 1px solid #e5e5e5;
+      font-family: var(--font-family2);
+    }
+  }
+}
+.modaloverlay{
+  @apply fixed inset-x-0;
+  bottom: 50%;
+  z-index: 999;
+ &::before{
+    @apply  fixed inset-0 z-10;
+    content: "";
+    background: rgba(0, 0, 0, 0.6);
+  }
+}
+}
+
+.succmsg_home{
+  svg{
+    @apply ml-1;
+  }
+}
